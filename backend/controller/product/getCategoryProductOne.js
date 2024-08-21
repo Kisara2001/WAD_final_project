@@ -1,6 +1,6 @@
 const productModel = require("../../models/productModel")
 
-
+// get category wise product
 const getCategoryProduct = async(req,res)=>{
     try{
         const productCategory = await productModel.distinct("category")
