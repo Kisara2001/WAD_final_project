@@ -1,7 +1,6 @@
 const productModel = require("../../models/productModel")
 
-// backend\controller\product\getProduct.js
-// get all product
+// get all product 
 const getProductController = async(req,res)=>{
     try{
         const allProduct = await productModel.find().sort({ createdAt : -1 })

@@ -1,5 +1,6 @@
 const userModel = require("../../models/userModel")
 
+// updateUser
 async function updateUser(req,res){
     try{
         const sessionUser = req.userId

@@ -1,5 +1,6 @@
 const addToCartModel = require("../../models/cartProduct")
 
+// updateAddToCartProduct
 const updateAddToCartProduct = async(req,res)=>{
     try{
         const currentUserId = req.userId 

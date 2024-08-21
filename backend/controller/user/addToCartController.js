@@ -1,5 +1,7 @@
 const addToCartModel = require("../../models/cartProduct")
 
+// backend\controller\user\addToCartController.js
+// addToCartController
 const addToCartController = async(req,res)=>{
     try{
         const { productId } = req?.body
