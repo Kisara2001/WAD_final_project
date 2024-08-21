@@ -1,5 +1,7 @@
 const productModel = require("../../models/productModel")
 
+// backend\controller\product\searchProduct.js
+// search product
 const searchProduct = async(req,res)=>{
     try{
         const query = req.query.q 

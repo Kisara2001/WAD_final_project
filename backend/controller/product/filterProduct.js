@@ -1,5 +1,7 @@
 const productModel = require("../../models/productModel")
 
+// backend\controller\product\filterProduct.js
+// filter product
 const filterProductController = async(req,res)=>{
  try{
         const categoryList = req?.body?.category || []

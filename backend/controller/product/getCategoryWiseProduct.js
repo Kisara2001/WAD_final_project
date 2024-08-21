@@ -1,5 +1,8 @@
 const productModel = require("../../models/productModel")
 
+// backend\controller\product\getCategoryWiseProduct.js
+// get category wise product
+
 const getCategoryWiseProduct = async(req,res)=>{
     try{
         const { category } = req?.body || req?.query

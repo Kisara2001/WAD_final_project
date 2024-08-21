@@ -1,5 +1,7 @@
 const productModel = require("../../models/productModel")
 
+// backend\controller\product\getProductDetails.js
+// get product details
 const getProductDetails = async(req,res)=>{
     try{
         const { productId } = req.body
