@@ -1,5 +1,6 @@
 const productModel = require("../../models/productModel")
 
+// get product details
 const getProductDetails = async(req,res)=>{
     try{
         const { productId } = req.body

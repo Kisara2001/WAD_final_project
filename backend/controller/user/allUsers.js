@@ -1,5 +1,7 @@
 const userModel = require("../../models/userModel")
 
+
+// allUsers
 async function allUsers(req,res){
     try{
         console.log("userid all Users",req.userId)

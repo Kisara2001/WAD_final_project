@@ -1,5 +1,8 @@
+// backend\controller\user\countAddToCartProduct.js
 const addToCartModel = require("../../models/cartProduct")
 
+
+// countAddToCartProduct
 const countAddToCartProduct = async(req,res)=>{
     try{
         const userId = req.userId

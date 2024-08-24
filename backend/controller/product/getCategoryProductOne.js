@@ -1,5 +1,6 @@
 const productModel = require("../../models/productModel")
 
+// get category wise product (1,0)-(3,0)
 
 const getCategoryProduct = async(req,res)=>{
     try{
