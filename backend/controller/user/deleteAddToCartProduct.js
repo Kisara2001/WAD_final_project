@@ -1,5 +1,6 @@
 const addToCartModel = require("../../models/cartProduct")
 
+// deleteAddToCartProduct
 const deleteAddToCartProduct = async(req,res)=>{
     try{
         const currentUserId = req.userId 

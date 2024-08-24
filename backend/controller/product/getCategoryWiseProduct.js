@@ -1,5 +1,6 @@
 const productModel = require("../../models/productModel")
 
+// get category wise product
 const getCategoryWiseProduct = async(req,res)=>{
     try{
         const { category } = req?.body || req?.query

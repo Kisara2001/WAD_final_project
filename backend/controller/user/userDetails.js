@@ -1,5 +1,6 @@
 const userModel = require("../../models/userModel")
 
+// userDetails
 async function userDetailsController(req,res){
     try{
         console.log("userId",req.userId)
