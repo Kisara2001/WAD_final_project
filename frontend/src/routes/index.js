@@ -3,6 +3,7 @@ import App from '../App'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import ForgotPassowrd from '../pages/ForgotPassowrd'
+import ResetPassword from '../pages/ResetPassword'; // Import ResetPassword component
 import SignUp from '../pages/SignUp'
 import AdminPanel from '../pages/AdminPanel'
 import AllUsers from '../pages/AllUsers'
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path : "forgot-password",
                 element : <ForgotPassowrd/>
+            },
+            {
+                path: "reset-password/:token", // Add this route for resetting password
+                element: <ResetPassword /> // Use ResetPassword component
             },
             {
                 path : "sign-up",

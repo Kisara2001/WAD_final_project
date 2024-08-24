@@ -22,13 +22,19 @@ const updateAddToCartProduct = require('../controller/user/updateAddToCartProduc
 const deleteAddToCartProduct = require('../controller/user/deleteAddToCartProduct')
 const searchProduct = require('../controller/product/searchProduct')
 const filterProductController = require('../controller/product/filterProduct')
-
+// Import Forgot Password Controllers
+const forgotPasswordController = require('../controller/user/forgotPassword');
+const resetPasswordController = require('../controller/user/resetPassword');
 
 
 router.post("/signup",userSignUpController)
 router.post("/signin",userSignInController)
 router.get("/user-details",authToken,userDetailsController)
 router.get("/userLogout",userLogout)
+
+// Forgot Password and Reset Password
+router.post("/forgot-password", forgotPasswordController);
+router.post("/reset-password/:token", resetPasswordController);
 
 //admin panel 
 router.get("/all-user",authToken,allUsers)
