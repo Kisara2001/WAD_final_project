@@ -19,6 +19,7 @@ const filterProductController = async (req, res) => {
         res.json({
             message: err.message || err,
             error: true,
+            
             success: false,
         });
     }
