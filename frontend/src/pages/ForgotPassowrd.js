@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import SummaryApi from '../common';
+import backgroundImage from '../assest/loginbackgroundimage.jpg';
 
-const ForgotPassowrd = () => {
+const ForgotPassword = () => {
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
 
@@ -30,8 +31,11 @@ const ForgotPassowrd = () => {
     };
 
     return (
-        <section className='min-h-screen flex items-center justify-center bg-gray-100'>
-            <div className='bg-white p-8 w-full max-w-md mx-auto rounded-xl shadow-xl'>
+        <section 
+            className='min-h-screen flex items-center justify-center bg-gray-100'
+            style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+            <div className='bg-white bg-opacity-100 p-8 w-full max-w-md mx-auto rounded-xl shadow-xl'>
                 <h2 className='text-2xl font-bold text-center mb-4'>Forgot Password</h2>
                 <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
                     <div className='grid gap-2'>
@@ -52,4 +56,4 @@ const ForgotPassowrd = () => {
     );
 }
 
-export default ForgotPassowrd;
+export default ForgotPassword;
