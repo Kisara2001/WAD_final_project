@@ -33,7 +33,7 @@ const userSignInController = async (req, res) => {
 
       const tokenOption = {
         httpOnly: true,
-        secure: true,
+        secure: false,
       };
 
       res.cookie('token', token, tokenOption).status(200).json({
