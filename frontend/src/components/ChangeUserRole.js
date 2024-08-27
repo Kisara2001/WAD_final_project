@@ -14,11 +14,14 @@ const ChangeUserRole = ({
 }) => {
     const [userRole,setUserRole] = useState(role)
 
+
     const handleOnChangeSelect = (e) => {
         setUserRole(e.target.value)
 
         console.log(e.target.value)
     }
+
+    console.log("user_id", userId)
 
     const updateUserRole = async() =>{
         const fetchResponse = await fetch(SummaryApi.updateUser.url,{
