@@ -12,65 +12,70 @@ import CategoryProduct from '../pages/CategoryProduct'
 import ProductDetails from '../pages/ProductDetails'
 import Cart from '../pages/Cart'
 import SearchProduct from '../pages/SearchProduct'
+import EditProfile from '../pages/EditProfile'
 
 const router = createBrowserRouter([
     {
-        path : "/",
-        element : <App/>,
-        children : [
+        path: "/",
+        element: <App />,
+        children: [
             {
-                path : "",
-                element : <Home/>
+                path: "",
+                element: <Home />
             },
             {
-                path : "login",
-                element : <Login/>
+                path: "login",
+                element: <Login />
             },
             {
-                path : "forgot-password",
-                element : <ForgotPassowrd/>
+                path: "forgot-password",
+                element: <ForgotPassowrd />
             },
             {
-                path: "reset-password/:token", // Add this route for resetting password
-                element: <ResetPassword /> // Use ResetPassword component
+                path: "reset-password/:token",
+                element: <ResetPassword />
             },
             {
-                path : "sign-up",
-                element : <SignUp/>
+                path: "sign-up",
+                element: <SignUp />
             },
             {
-                path : "product-category",
-                element : <CategoryProduct/>
+                path: "product-category",
+                element: <CategoryProduct />
             },
             {
-                path : "product/:id",
-                element : <ProductDetails/>
+                path: "product/:id",
+                element: <ProductDetails />
             },
             {
-                path : 'cart',
-                element : <Cart/>
+                path: 'cart',
+                element: <Cart />
             },
             {
-                path : "search",
-                element : <SearchProduct/>
+                path: "search",
+                element: <SearchProduct />
             },
             {
-                path : "admin-panel",
-                element : <AdminPanel/>,
-                children : [
+                path: "admin-panel",
+                element: <AdminPanel />,
+                children: [
                     {
-                        path : "all-users",
-                        element : <AllUsers/>
+                        path: "all-users",
+                        element: <AllUsers />
                     },
                     {
-                        path : "all-products",
-                        element : <AllProducts/>
+                        path: "all-products",
+                        element: <AllProducts />
                     }
                 ]
             },
+            {
+                path: "edit-profile",  // Add this route for the Edit Profile page
+                element: <EditProfile />
+            }
         ]
     }
-])
+]);
 
+export default router;
 
-export default router
