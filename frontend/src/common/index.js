@@ -1,4 +1,4 @@
-const backendDomin = "http://13.127.107.45:8080";
+const backendDomin = "http://loacalhost:8080";
 
 const SummaryApi = {
     signUP: {
