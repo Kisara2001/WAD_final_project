@@ -1,28 +1,28 @@
-import React from 'react'
-import CategoryList from '../components/CategoryList'
-import BannerProduct from '../components/BannerProduct'
-import HorizontalCardProduct from '../components/HorizontalCardProduct'
-import VerticalCardProduct from '../components/VerticalCardProduct'
+const userModel = require('../../models/userModel');
 
-const Home = () => {
-  return (
-    <div style={{ backgroundColor: '#f0f2f5', minHeight: '100vh', paddingTop: '20px' }}>
-      <CategoryList/>
-      <BannerProduct/>
+const editProfileController = async (req, res) => {
+    try {
+        const { userId, name, telephone, address, profession, profilePic } = req.body;
+        const user = await userModel.findById(userId);
 
-      <HorizontalCardProduct category={"airpodes"} heading={"Top's Airpodes"}/>
-      <HorizontalCardProduct category={"watches"} heading={"Popular's Watches"}/>
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
 
-      <VerticalCardProduct category={"mobiles"} heading={"Mobiles"}/>
-      <VerticalCardProduct category={"Mouse"} heading={"Mouse"}/>
-      <VerticalCardProduct category={"televisions"} heading={"Televisions"}/>
-      <VerticalCardProduct category={"camera"} heading={"Camera & Photography"}/>
-      <VerticalCardProduct category={"earphones"} heading={"Wired Earphones"}/>
-      <VerticalCardProduct category={"speakers"} heading={"Bluetooth Speakers"}/>
-      <VerticalCardProduct category={"refrigerator"} heading={"Refrigerator"}/>
-      <VerticalCardProduct category={"trimmers"} heading={"Trimmers"}/>
-    </div>
-  )
-}
+        // Update the user profile fields
+        user.name = name || user.name;
+        user.telephone = telephone || user.telephone;
+        user.address = address || user.address;
+        user.profession = profession || user.profession;
+        user.profilePic = profilePic || user.profilePic;
 
-export default Home
+        // Save the updated user profile
+        await user.save();
+
+        res.json({ success: true, message: 'Profile updated successfully', user });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+};
+
+module.exports = editProfileController;
