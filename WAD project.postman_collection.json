@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "53430243-880a-4e92-9d0e-3a6dae4fb4ef",
+		"name": "WAD project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16879663"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kisarar@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/forgot-password"
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Kisara@123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/reset-password/111786138bd497895124cd13089b488b7da03b2a"
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"sumal@email.com\",\r\n    \"password\" : \"sumal123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "user-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/user-details"
+					},
+					"response": []
+				},
+				{
+					"name": "userLogout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/userLogout"
+					},
+					"response": []
+				},
+				{
+					"name": "singnup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\" : \"sumal\",\r\n    \"email\" : \"sumal123@email.com\",\r\n    \"password\" : \"sumal123\",\r\n    \"profilePic\" :\"\",\r\n    \"role\" : \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin panel",
+			"item": [
+				{
+					"name": "all-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/all-user?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"all-user"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/update-user?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-user"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "upload-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\" : \"boAt Stone 1508 \",\r\n    \"brandName\" : \"boAt\",\r\n    \"category\" : \"speaker\",\r\n    \"productImage\" : \"\",\r\n    \"description\" : \"\",\r\n    \"price\" : \"2500\",\r\n    \"sellingPrice\" : \"2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/upload-product?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"upload-product"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/get-product"
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"_id\": \"66cebbdc6d0e2449e9872d2f\",\r\n    \"productName\" : \"boAt Stone 1508 \",\r\n    \"brandName\" : \"boAt\",\r\n    \"category\" : \"speaker\",\r\n    \"productImage\" : \"\",\r\n    \"description\" : \"\",\r\n    \"price\" : \"2500\",\r\n    \"sellingPrice\" : \"2200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-product?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-product"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-categoryProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/get-product"
+					},
+					"response": []
+				},
+				{
+					"name": "category-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\":\"speaker\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/category-product"
+					},
+					"response": []
+				},
+				{
+					"name": "product-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66ce12dac557303751319708\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/product-details"
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/search"
+					},
+					"response": []
+				},
+				{
+					"name": "filter-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryList\" : [\"Airpodes\"] \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/filter-product"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add to cart",
+			"item": [
+				{
+					"name": "addtocart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"66cebbdc6d0e2449e9872d2f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/addtocart?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"addtocart"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "countAddToCartProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/countAddToCartProduct?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"countAddToCartProduct"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-card-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update-cart-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n  \"_id\": \"66cebbdc6d0e2449e9872d2f\",\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-cart-product?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-cart-product"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-cart-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66cebbdc6d0e2449e9872d2f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/delete-cart-product?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-cart-product"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
