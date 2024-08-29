@@ -1,0 +1,5 @@
+Server URL - http://13.127.107.45/
+
+Admin User login Credentials
+Email: adminuser@gmail.com
+Password: Admin@123

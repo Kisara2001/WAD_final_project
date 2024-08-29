@@ -1,0 +1,45 @@
+
+> client@0.1.0 start
+> react-scripts start
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:11902) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11902) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+
+<--- Last few GCs --->
+
+[11902:0x55f817e08f10]    31118 ms: Mark-sweep 247.7 (258.5) -> 247.1 (259.0) MB, 368.5 / 0.0 ms  (average mu = 0.469, current mu = 0.067) allocation failure; scavenge might not succeed
+[11902:0x55f817e08f10]    31555 ms: Mark-sweep 248.3 (259.0) -> 247.7 (259.2) MB, 424.3 / 0.0 ms  (average mu = 0.275, current mu = 0.028) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0x55f812689120 node::Abort() [/opt/bitnami/node/bin/node]
+ 2: 0x55f81257062b  [/opt/bitnami/node/bin/node]
+ 3: 0x55f8128761e0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/opt/bitnami/node/bin/node]
+ 4: 0x55f81287659b v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/opt/bitnami/node/bin/node]
+ 5: 0x55f812a6c445  [/opt/bitnami/node/bin/node]
+ 6: 0x55f812a7d5df v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/opt/bitnami/node/bin/node]
+ 7: 0x55f812a5509a v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/opt/bitnami/node/bin/node]
+ 8: 0x55f812a562c4 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/opt/bitnami/node/bin/node]
+ 9: 0x55f812a344dd v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/opt/bitnami/node/bin/node]
+10: 0x55f812e38ebd v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/opt/bitnami/node/bin/node]
+11: 0x55f8132aeeb9  [/opt/bitnami/node/bin/node]
